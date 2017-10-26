@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fr.coppernic.samples.srx.MainActivity">
+
+    <Button
+        android:id="@+id/btnActive"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/active"
+        app:layout_constraintLeft_toLeftOf="@+id/btnRead"
+        app:layout_constraintRight_toRightOf="@+id/btnRead"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnRelease"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/release"
+        app:layout_constraintLeft_toLeftOf="@+id/btnWrite"
+        app:layout_constraintRight_toRightOf="@+id/btnWrite"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnRead"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/read"
+        app:layout_constraintLeft_toLeftOf="@+id/btnReadBlocks"
+        app:layout_constraintRight_toRightOf="@+id/btnReadBlocks"
+        app:layout_constraintTop_toBottomOf="@+id/btnActive" />
+
+    <Button
+        android:id="@+id/btnWrite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/write"
+        app:layout_constraintLeft_toLeftOf="@+id/btnWriteBlocks"
+        app:layout_constraintRight_toRightOf="@+id/btnWriteBlocks"
+        app:layout_constraintTop_toBottomOf="@+id/btnRelease" />
+
+    <Button
+        android:id="@+id/btnReadBlocks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/read_blocks"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRead"
+        android:layout_marginStart="8dp" />
+
+    <Button
+        android:id="@+id/btnWriteBlocks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/write_blocks"
+        app:layout_constraintLeft_toRightOf="@+id/btnReadBlocks"
+        app:layout_constraintTop_toBottomOf="@+id/btnWrite"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/address"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnReadBlocks"
+        android:layout_marginStart="8dp" />
+
+    <Spinner
+        android:id="@+id/spAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAddress"
+        app:layout_constraintLeft_toRightOf="@+id/tvAddress"
+        app:layout_constraintTop_toTopOf="@+id/tvAddress"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/tvNbBytes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/nb_bytes"
+        app:layout_constraintLeft_toRightOf="@+id/spAddress"
+        app:layout_constraintTop_toBottomOf="@+id/btnWriteBlocks"
+        android:layout_marginStart="8dp" />
+
+    <Spinner
+        android:id="@+id/spNbBytes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNbBytes"
+        app:layout_constraintLeft_toRightOf="@+id/tvNbBytes"
+        app:layout_constraintTop_toTopOf="@+id/tvNbBytes"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etDataToWrite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="00 01 02 03 04 05 06 07"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDataToWrite" />
+
+    <TextView
+        android:id="@+id/tvDataToWrite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/data_to_write"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddress"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/etLogs"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textMultiLine|textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/etDataToWrite" />
+</android.support.constraint.ConstraintLayout>

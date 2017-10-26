@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SRx sample</string>
+    <string name="active">Active</string>
+    <string name="release">Release</string>
+    <string name="read">Read</string>
+    <string name="write">Write</string>
+    <string name="read_blocks">Read blocks</string>
+    <string name="write_blocks">Write blocks</string>
+    <string name="address">Address/Block:</string>
+    <string name="nb_bytes">Nb bytes/blocks:</string>
+    <string name="data_to_write">Data to write:</string>
+    <string name="clear">Clear</string>
+</resources>
